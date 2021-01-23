@@ -1,0 +1,4 @@
+[build-menu]
+FT_02_LB=_Lint
+FT_02_CM=pycodestyle --max-line-length=80 "%f"
+FT_02_WD=
