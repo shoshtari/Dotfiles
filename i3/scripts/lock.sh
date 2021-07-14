@@ -12,15 +12,12 @@ V='#ffcb80bb'
 /usr/bin/i3lock \
 --insidevercolor=$C   \
 --ringvercolor=$V     \
-\
 --insidewrongcolor=$C \
 --ringwrongcolor=$W   \
-\
 --insidecolor=$B      \
 --ringcolor=$D        \
 --linecolor=$B        \
 --separatorcolor=$D   \
-\
 --verifcolor=$T        \
 --wrongcolor=$T        \
 --timecolor=$T        \
@@ -28,7 +25,6 @@ V='#ffcb80bb'
 --layoutcolor=$T      \
 --keyhlcolor=$W       \
 --bshlcolor=$W        \
-\
 --screen 1            \
 --blur 5              \
 --clock               \

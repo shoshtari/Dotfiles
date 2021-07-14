@@ -18,11 +18,11 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #b302003d
-background-alt = #4d1e1e1e
+background = #5FBBC1E1
+background-alt = #4dffffff
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #dfdfdf
+foreground = #000017
+foreground-alt = #000017
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -82,9 +82,9 @@ separator = |
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
+; [module/xwindow]
+; type = internal/xwindow
+; label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard

@@ -40,7 +40,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec qterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -178,8 +178,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+title_align center
 # Window Colors
-set	$bgcolor	#00897bcc
+set	$bgcolor	#0000FF55
 set	$ibgcolor	#363636
 set	$textcolor	#ffffff
 set	$ubgcolor	#ff0000
@@ -217,11 +218,11 @@ client.urgent           $dbgcolor	$bgcolor	$textcolor	$ubgcolor
 
 
 #Display Wallpaper
-exec_always feh --bg-fill /home/mpc/Pictures/Wallpapers/ArchLinux2.jpg 
+exec_always feh --bg-fill /home/mpc/Pictures/Wallpapers/blue_background_design_2-wallpaper-2560x1440.jpg
 
 
 # i3lock keybind
-bindsym $mod+l exec /home/mpc/.config/i3/scripts/lock.sh 
+bindsym $mod+l exec /home/mpc/.config/i3/scripts/i3lock.sh 
 
 # flameshot
 bindsym Print exec flameshot gui 
@@ -235,7 +236,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Move windows to their WS
 for_window [class="firefox"] move to workspace $ws1
-for_window [class="konsole"] move to workspace $ws2
+for_window [class="qterminal"] move to workspace $ws2
 for_window [class="TelegramDesktop"] move to workspace $ws3
 for_window [class="Clementine"] move to workspace $ws4
 for_window [class="Org.gnome.clocks"] move to workspace $ws5
@@ -254,11 +255,13 @@ exec_always picom -f
 exec_always setxkbmap -layout us,ir -option 'grp:alt_shift_toggle'
 
 
-# Tap to click in I3
-exec_always xinput set-prop 12 327 1
-
 # Guake
 #exec_always yakuake
 
 # Polybar launch script
 exec_always --no-startup-id /home/mpc/.config/i3/polybar/launch.sh
+
+exec_always xinput set-prop 12 331 1
+
+# Binding key for firefox
+bindsym XF86HomePage exec firefox
