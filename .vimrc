@@ -41,6 +41,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'preservim/nerdtree'
 " Show clock in vim airline
 Plugin 'enricobacis/vim-airline-clock'
+" Vim-GO 
+Plugin 'fatih/vim-go'
 call vundle#end()            " required
 "filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -55,7 +57,6 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set guifont=Consolas:h16
-colorscheme gruvbox
 
 if strftime("%H") < 17 && strftime("%H") > 7
   set background=light
