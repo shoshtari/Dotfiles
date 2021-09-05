@@ -79,9 +79,10 @@ colorscheme gruvbox
 :set tabstop=4
 
 " Map F5 to run program in diffrent language ( in some language compile and run)
-:autocmd FileType python :noremap <F5> :!clear && python % && echo press Enter to return to the VIM && read <CR> 
-:autocmd FileType go :noremap <F5> :!clear && go run % && echo press Enter to return to the VIM && read  <CR> 
-:autocmd FileType c :noremap <F5> :!clear && gcc % -o a.out && echo " Compile finished " && ./a.out && echo "\npress Enter to return to the VIM" && read  <CR> 
+:autocmd FileType python :noremap <F5> :w <bar> !clear && python % && echo press Enter to return to the VIM ; read <CR> 
+:autocmd FileType go :noremap <F5> :w <bar> !clear && go run % && echo press Enter to return to the VIM ; read  <CR> 
+:autocmd FileType c :noremap <F5> :w <bar> !clear && gcc % -o a.out && echo "Compile finished " && ./a.out && echo "\npress Enter to return to the VIM" ; read  <CR> 
+:autocmd FileType cpp :noremap <F5> :w <bar> !clear && g++ % -o a.out && echo "Compile finished " && ./a.out && echo "\npress Enter to return to the VIM" ; read  <CR> 
 " Go
 " Go syntax highlighting
 let g:go_highlight_fields = 1
