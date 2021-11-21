@@ -1,0 +1,68 @@
+[2021-11-19 05:36:40.335] [sharedprocess] [info] Installing extension: ms-vscode.cpptools-extension-pack
+[2021-11-19 05:36:50.671] [sharedprocess] [info] Installing extension: ms-vscode.cpptools
+[2021-11-19 05:36:50.671] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-wsl
+[2021-11-19 05:36:50.671] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-containers
+[2021-11-19 05:36:50.672] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-ssh
+[2021-11-19 05:36:50.672] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-ssh-edit
+[2021-11-19 05:36:50.672] [sharedprocess] [info] Installing extension: ms-vscode.cmake-tools
+[2021-11-19 05:36:50.673] [sharedprocess] [info] Installing extension: twxs.cmake
+[2021-11-19 05:36:50.673] [sharedprocess] [info] Extension is already requested to install twxs.cmake
+[2021-11-19 05:36:50.673] [sharedprocess] [info] Installing extension: jeff-hykin.better-cpp-syntax
+[2021-11-19 05:36:50.674] [sharedprocess] [info] Installing extension: cschlosser.doxdocgen
+[2021-11-19 05:36:50.674] [sharedprocess] [info] Installing extension: ms-vscode.cpptools-themes
+[2021-11-19 05:36:53.703] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-wsl /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode-remote.remote-wsl-0.58.5
+[2021-11-19 05:36:53.849] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.f34475a2-d0d6-4a72-93df-aa169c3f253a: ms-vscode-remote.remote-wsl
+[2021-11-19 05:36:53.862] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode-remote.remote-wsl-0.58.5
+[2021-11-19 05:36:53.865] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-wsl
+[2021-11-19 05:36:55.697] [sharedprocess] [info] Downloaded extension: jeff-hykin.better-cpp-syntax /home/mpc/.config/Code/CachedExtensionVSIXs/jeff-hykin.better-cpp-syntax-1.15.10
+[2021-11-19 05:36:55.744] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.b34099cf-2959-4cbb-bce3-a74147e5e75d: jeff-hykin.better-cpp-syntax
+[2021-11-19 05:36:55.749] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/jeff-hykin.better-cpp-syntax-1.15.10
+[2021-11-19 05:36:55.751] [sharedprocess] [info] Extracting completed. jeff-hykin.better-cpp-syntax
+[2021-11-19 05:36:57.075] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-ssh-edit /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode-remote.remote-ssh-edit-0.66.1
+[2021-11-19 05:36:57.111] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.a84dee6c-1455-4c7f-8f22-7f14746493ae: ms-vscode-remote.remote-ssh-edit
+[2021-11-19 05:36:57.117] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode-remote.remote-ssh-edit-0.66.1
+[2021-11-19 05:36:57.120] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-ssh-edit
+[2021-11-19 05:36:57.411] [sharedprocess] [info] Downloaded extension: ms-vscode.cpptools-themes /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode.cpptools-themes-1.0.0
+[2021-11-19 05:36:57.447] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.cda87593-0409-4b6a-a010-f0aa630f971a: ms-vscode.cpptools-themes
+[2021-11-19 05:36:57.452] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode.cpptools-themes-1.0.0
+[2021-11-19 05:36:57.453] [sharedprocess] [info] Extracting completed. ms-vscode.cpptools-themes
+[2021-11-19 05:36:59.103] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-ssh /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode-remote.remote-ssh-0.66.0
+[2021-11-19 05:36:59.266] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.907bfb31-7be1-4a48-9e9f-292df520666b: ms-vscode-remote.remote-ssh
+[2021-11-19 05:36:59.277] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode-remote.remote-ssh-0.66.0
+[2021-11-19 05:36:59.279] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-ssh
+[2021-11-19 05:37:01.070] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-containers /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode-remote.remote-containers-0.205.1
+[2021-11-19 05:37:01.849] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.e0ba9f85-c5c1-418d-9ecd-a10bbc64d189: ms-vscode-remote.remote-containers
+[2021-11-19 05:37:01.862] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode-remote.remote-containers-0.205.1
+[2021-11-19 05:37:01.864] [sharedprocess] [info] Extracting completed. ms-vscode-remote.remote-containers
+[2021-11-19 05:37:03.590] [sharedprocess] [info] Downloaded extension: ms-vscode.cmake-tools /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode.cmake-tools-1.9.1
+[2021-11-19 05:37:03.832] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.5a17d26a-4231-485f-8e55-b9ccd19bc0a7: ms-vscode.cmake-tools
+[2021-11-19 05:37:03.845] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode.cmake-tools-1.9.1
+[2021-11-19 05:37:03.848] [sharedprocess] [info] Extracting completed. ms-vscode.cmake-tools
+[2021-11-19 05:37:07.037] [sharedprocess] [info] Downloaded extension: cschlosser.doxdocgen /home/mpc/.config/Code/CachedExtensionVSIXs/cschlosser.doxdocgen-1.3.2
+[2021-11-19 05:37:08.478] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.147ff3a8-d712-43dc-a94b-08bfbae10c8e: cschlosser.doxdocgen
+[2021-11-19 05:37:08.489] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/cschlosser.doxdocgen-1.3.2
+[2021-11-19 05:37:08.491] [sharedprocess] [info] Extracting completed. cschlosser.doxdocgen
+[2021-11-19 05:37:10.803] [sharedprocess] [info] Downloaded extension: ms-vscode.cpptools /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode.cpptools-1.7.1
+[2021-11-19 05:37:11.344] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.b58b398d-ca21-43d0-8c10-240d07d4ad39: ms-vscode.cpptools
+[2021-11-19 05:37:11.353] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode.cpptools-1.7.1
+[2021-11-19 05:37:11.356] [sharedprocess] [info] Extracting completed. ms-vscode.cpptools
+[2021-11-19 05:37:14.292] [sharedprocess] [info] Downloaded extension: twxs.cmake /home/mpc/.config/Code/CachedExtensionVSIXs/twxs.cmake-0.0.17
+[2021-11-19 05:37:14.542] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.8c3830a9-6045-4796-8380-fd4b1f863fbd: twxs.cmake
+[2021-11-19 05:37:14.553] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/twxs.cmake-0.0.17
+[2021-11-19 05:37:14.555] [sharedprocess] [info] Extracting completed. twxs.cmake
+[2021-11-19 05:37:15.936] [sharedprocess] [info] Downloaded extension: ms-vscode.cpptools-extension-pack /home/mpc/.config/Code/CachedExtensionVSIXs/ms-vscode.cpptools-extension-pack-1.1.0
+[2021-11-19 05:37:15.950] [sharedprocess] [info] Extracted extension to /home/mpc/.vscode/extensions/.e2804e80-82b6-40b1-878c-3273a8337ead: ms-vscode.cpptools-extension-pack
+[2021-11-19 05:37:15.954] [sharedprocess] [info] Renamed to /home/mpc/.vscode/extensions/ms-vscode.cpptools-extension-pack-1.1.0
+[2021-11-19 05:37:15.955] [sharedprocess] [info] Extracting completed. ms-vscode.cpptools-extension-pack
+[2021-11-19 05:37:15.960] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-wsl
+[2021-11-19 05:37:15.961] [sharedprocess] [info] Extension installed successfully: jeff-hykin.better-cpp-syntax
+[2021-11-19 05:37:15.961] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-ssh-edit
+[2021-11-19 05:37:15.961] [sharedprocess] [info] Extension installed successfully: ms-vscode.cpptools-themes
+[2021-11-19 05:37:15.962] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-ssh
+[2021-11-19 05:37:15.962] [sharedprocess] [info] Extension installed successfully: ms-vscode-remote.remote-containers
+[2021-11-19 05:37:15.962] [sharedprocess] [info] Extension installed successfully: ms-vscode.cmake-tools
+[2021-11-19 05:37:15.963] [sharedprocess] [info] Extension installed successfully: cschlosser.doxdocgen
+[2021-11-19 05:37:15.963] [sharedprocess] [info] Extension installed successfully: ms-vscode.cpptools
+[2021-11-19 05:37:15.963] [sharedprocess] [info] Extension installed successfully: twxs.cmake
+[2021-11-19 05:37:15.963] [sharedprocess] [info] Extension installed successfully: ms-vscode.cpptools-extension-pack
+[2021-11-19 06:51:27.503] [sharedprocess] [warning] No ptyHost heartbeat after 6 seconds
