@@ -104,5 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$PATH:/home/mpc/.local/bin"
+export GOPATH=$HOME/go
+export PATH="$PATH:/home/mpc/.local/bin:$GOPATH/bin"
+alias win="/mnt/mpc/Users/mpc"
+source <(kubectl completion zsh)
 fortune | cowsay | lolcat
