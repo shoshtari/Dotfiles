@@ -20,6 +20,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'github/copilot.vim'
 " Css Color
 Plug 'ap/vim-css-color'
+
 call plug#end()            " required
 
 if strftime("%H") < 17 && strftime("%H") > 7
@@ -44,6 +45,9 @@ set laststatus=2
 set autoindent
 set smartindent
 map <F9> :NERDTreeToggle<CR>
+
+" Autosave
+
 let g:indentLine_char = '|'
 let g:airline_theme='hybridline'
 let g:airline#extensions#clock#format = '%c'

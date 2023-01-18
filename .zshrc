@@ -116,11 +116,7 @@ export GOPATH=$HOME/go
 export PATH="$PATH:/home/mpc/.local/bin:$GOPATH/bin"
 export KUBE_EDITOR=vim
 
-alias vi=vim
-alias k='kubectl'
-alias wa='watch '
-alias v='vim'
-
+source ~/.shell_aliases
 source <(kubectl completion zsh)
 . <(flux completion zsh)
 # fortune | cowsay | lolcat

@@ -19,7 +19,7 @@
 [colors]
 background = #5FBBC1E1
 background-alt = #4dffffff
-foreground = #000017
+foreground = #252525
 foreground-alt = #000017
 primary = #ffb52a
 secondary = #e60053
@@ -27,11 +27,12 @@ alert = #bd2c40
 
 [bar/topbar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 98%
 height = 24
-radius = 2.0
+radius = 12.0
 fixed-center = false
-
+offset-x = 1%
+offset-y = 0.5%
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -50,9 +51,9 @@ module-margin-right = 1
 font-0 = ubuntu:fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=12;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-5 = Font Awesome 5 Brands:pixelsize=12;2
+font-3 = Font Awesome 6 Free:pixelsize=12;2
+font-4 = Font Awesome 6 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 6 Brands:pixelsize=12;2
 
 modules-left = bspwm
 modules-center = xwindow
@@ -120,22 +121,18 @@ label-empty-padding = 2
 label-separator = 
 
 ws-icon-0 = I; 
-ws-icon-1 = II; 
+ws-icon-1 = II; 
 ws-icon-2 = III; 
 ws-icon-3 = IV; 
 ws-icon-4 = V; 
 ws-icon-5 = VI; 
+ws-icon-6 = VII; 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-ws-icon-0 = 1;  
-ws-icon-1 = 2;  
-ws-icon-2 = 3;  
-ws-icon-3 = 4;  
-ws-icon-4 = 5;  
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 

@@ -1,0 +1,8 @@
+" Press ? for help
+
+.. (up a dir)
+/home/mpc/.config/bspwm/
+▸ polybar/
+  bspwmrc*
+  i3lock.sh*
+  autorun.sh

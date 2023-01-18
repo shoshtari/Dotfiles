@@ -1,0 +1,21 @@
+#!/usr/bin/zsh
+alias vi=vim
+alias kmola='kubectl -n molana'
+alias kf='kubectl -n file'
+alias k='kubectl'
+alias wa='watch '
+alias sabzvpn='sudo openvpn --config /home/mpc/Documents/ovpn_configs/sabzsystem.ovpn'
+alias balevpn='sudo openvpn --config ~/Documents/ovpn_configs/vpntcp.ovpn'
+alias v='vim'
+
+function tocpbd() {
+	cat $1 | xclip -selection clipboard
+}
+
+function miglog(){
+	src="siloo-migrator-$1-to29cold"
+	echo $src
+	kf logs -l app="siloo-migrator-$1to29cold" -f --tail 1
+}
+
+# alias miglog='n'

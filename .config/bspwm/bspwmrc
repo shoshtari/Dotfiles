@@ -3,9 +3,6 @@
 # KeyBinding manager
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# Polybar
-/home/mpc/.config/bspwm/polybar/launch.sh
-
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width        3
@@ -17,7 +14,8 @@ bspc config gapless_monocle      true
 
 # BSPWM Rules
 bspc rule -a firefox desktop='^1' 
-bspc rule -a Gnome-terminal desktop='^2' follow=on 
+bspc rule -a Terminator desktop='^2' follow=on 
+bspc rule -a jetbrains-goland desktop='^2'
 bspc rule -a TelegramDesktop desktop='^3' 
 bspc rule -a Clementine desktop='^4'
 bspc rule -a gnome-clocks desktop='^5'
@@ -30,15 +28,10 @@ bspc rule -a conky sticky=on state=floating border=off lower=on
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
 
-# Adding Persian layout
-setxkbmap -layout us,ir -option "grp:alt_shift_toggle"
-# Wallpaper
- feh --bg-fill /home/mpc/Pictures/Wallpapers/fog_wave-wallpaper-7680x4320.jpg 
-
-#Picom 
-picom -f &
-
 # Change Focus on hover of pointer
 bspc config focus_follows_pointer true
 
-/usr/lib/xfce-polkit/xfce-polkit &
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+~/.config/bspwm/autorun.sh
+

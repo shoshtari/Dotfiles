@@ -20,4 +20,6 @@
 --time-size 32 \
 --date-size 18 \
 --layout-size 20 \
---line-color 013700
+--line-color 013700 &
+
+sleep 0.5 && xset dpms force suspend
