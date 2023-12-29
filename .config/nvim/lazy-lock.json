@@ -1,0 +1,18 @@
+{
+  "catppuccin": { "branch": "main", "commit": "079500a625f3ae5aa6efb758f1a17fe4c7a57e52" },
+  "cellular-automaton.nvim": { "branch": "main", "commit": "b7d056dab963b5d3f2c560d92937cb51db61cb5b" },
+  "copilot.vim": { "branch": "release", "commit": "5b19fb001d7f31c4c7c5556d7a97b243bd29f45f" },
+  "ddc.vim": { "branch": "main", "commit": "9a8d0a417e55e4e012ad458c9d00232d33163f8d" },
+  "denops.vim": { "branch": "main", "commit": "886bfa038d75d415677f8a7a62e8940c74554707" },
+  "git-blame.nvim": { "branch": "master", "commit": "f07e913b7143f19edd6787229f2d51759b478600" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "d4c718467d35bc93714425a7102d82e7e5065280" },
+  "jedi-vim": { "branch": "master", "commit": "b82da7d2b5efa28449f1a46e906dee439f68240c" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "nvim-treesitter": { "branch": "master", "commit": "25ddfde8d7167d7d81403d6809242439037d2b68" },
+  "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
+  "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
+  "telescope.nvim": { "branch": "master", "commit": "6213322ab56eb27356fdc09a5078e41e3ea7f3bc" },
+  "vim-commentary": { "branch": "master", "commit": "e87cd90dc09c2a203e13af9704bd0ef79303d755" },
+  "vim-go": { "branch": "master", "commit": "e8c18054cc44973ee4f59ee463dda4bf6439713c" },
+  "vim-wakatime": { "branch": "master", "commit": "8c8856327815a077cbebeba8c7456312a3d2c39c" }
+}

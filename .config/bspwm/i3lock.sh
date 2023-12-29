@@ -1,7 +1,8 @@
 #!/usr/bin/sh
 
+#--blur 10
 /usr/bin/i3lock \
---blur=10 \
+--blur 0 \
 -k \
 --indicator \
 --radius 100 \

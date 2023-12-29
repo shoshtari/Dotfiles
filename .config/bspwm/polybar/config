@@ -1,28 +1,15 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [colors]
-background = #5FBBC1E1
-background-alt = #4dffffff
-foreground = #252525
-foreground-alt = #000017
-primary = #ffb52a
-secondary = #e60053
+navy = #000080
+background = #aa24283b
+background-focus = #555555
+foreground = #c0caf5
+green = #5af78e
+purple = #ae81ff
+dark-green = #5f7e97
+dark-yellow = #e6db74
+dark-red = #ff555#5
+light-blue = #22a2c9
+
 alert = #bd2c40
 
 [bar/topbar]
@@ -39,10 +26,10 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 2
-border-color = #00000000
+; border-size = 2
+; border-color = #00000000
 
-padding-left = 2
+padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
@@ -57,7 +44,7 @@ font-5 = Font Awesome 6 Brands:pixelsize=12;2
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan battery date powermenu
+modules-right = pulseaudio xkeyboard filesyste memory cpu wlan battery date powermenu
 
 tray-position = none
 tray-padding = 2
@@ -88,6 +75,38 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %icon%
+label-focused-background = ${colors.background-focus}
+label-focused-foreground = ${colors.light-blue}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 1
+
+label-occupied = %icon%
+label-occupied-padding = 1
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+; Separator in between workspaces
+label-separator = 
+
+; a global web browser icon
+ws-icon-0 = I;
+ws-icon-1 = II; 
+ws-icon-2 = III; 
+ws-icon-3 = IV; 
+ws-icon-4 = V; 
+ws-icon-5 = VI; 
+ws-icon-6 = VII; 
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -97,110 +116,6 @@ mount-0 = /
 label-mounted =  :  %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %icon%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %icon%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = 
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-label-separator = 
-
-ws-icon-0 = I; 
-ws-icon-1 = II; 
-ws-icon-2 = III; 
-ws-icon-3 = IV; 
-ws-icon-4 = V; 
-ws-icon-5 = VI; 
-ws-icon-6 = VII; 
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-
-
-
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %index% %icon%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index% %icon%
-label-unfocused-padding = 2
-
-; visible = Active workspace on unfocused monitor
-label-visible = %index% %icon%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %index% $icon$
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
-
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
@@ -263,7 +178,8 @@ time = %H:%M:%S
 time-alt = %H:%M:%S
 
 format-prefix =  
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.green}
+format-foreground = ${colors.purple}
 format-underline = #0a6cf5
 
 label = %date% %time%
@@ -287,7 +203,7 @@ bar-volume-foreground-3 = #55aa55
 bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = true
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
@@ -333,18 +249,19 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+
+format-discharging = <ramp-capacity> <label-discharging>%{B-}
+format-discharging-foreground = ${colors.foreground}
+ramp-capacity-0 = %{B#e01212}
+ramp-capacity-1 = %{B#e06912}
+; using normal foreground color for 50% to avoid flickering
+ramp-capacity-2 = %{B#24283b}
+ramp-capacity-3 = %{B#24283b}
+ramp-capacity-4 = %{B#24283b}
 
 format-full-prefix = "  "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 =   
-ramp-capacity-1 =   
-ramp-capacity-2 =   
-ramp-capacity-3 =   
-ramp-capacity-4 =   
 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
@@ -354,17 +271,12 @@ animation-charging-2 = 
 animation-charging-3 =   
 animation-charging-4 =   
 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-foreground = ${colors.green}
 animation-charging-framerate = 750
 
-animation-discharging-0 =   
-animation-discharging-1 =   
-animation-discharging-2 =   
-animation-discharging-3 =   
-animation-discharging-4 =   
+
 
 animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature

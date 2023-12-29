@@ -1,47 +1,28 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [colors]
-background = #5FBBC1E1
-background-alt = #4dffffff
-foreground = #252525
-foreground-alt = #000017
-primary = #ffb52a
-secondary = #e60053
+navy = #000080
+background = #24283b
+background-alt = #2c2f44
+foreground = #c0caf5
 alert = #bd2c40
 
 [bar/topbar]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
+width = 98%
 height = 24
-radius = 2.0
+radius = 12.0
 fixed-center = false
-
+offset-x = 1%
+offset-y = 0.5%
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
 
-border-size = 2
-border-color = #00000000
+; border-size = 2
+; border-color = #00000000
 
-padding-left = 2
+padding-left = 0
 padding-right = 2
 
 module-margin-left = 1

@@ -2,7 +2,8 @@
 setxkbmap -layout us,ir -option "grp:win_space_toggle"
 
 # Wallpaper
-feh --bg-fill /home/mpc/Pictures/Wallpapers/arch-linux-wallpaper.png
+# feh --bg-fill /home/mpc/Pictures/Wallpapers/Rosette_Insley_3424.jpg
+feh --bg-fill $(cat ~/.config/bspwm/wallpaper)
 
 #Picom 
 picom -f &
@@ -17,7 +18,18 @@ flameshot &
 /home/mpc/.config/bspwm/polybar/launch.sh
 
 # Conky 
-conky &
+# conky &
 
 # Guake
-guake &
+yakuake &
+
+# V2ray
+v2raya --lite &
+
+eval $(ssh-agent)
+
+# handling kde apps
+export XDG_CURRENT_DESKTOP=KDE
+export XDG_SESSION_DESKTOP=KDE
+
+

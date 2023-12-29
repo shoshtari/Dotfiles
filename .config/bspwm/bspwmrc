@@ -15,6 +15,7 @@ bspc config gapless_monocle      true
 # BSPWM Rules
 bspc rule -a firefox desktop='^1' 
 bspc rule -a Terminator desktop='^2' follow=on 
+bspc rule -a kitty desktop='^2' follow=on 
 bspc rule -a jetbrains-goland desktop='^2'
 bspc rule -a TelegramDesktop desktop='^3' 
 bspc rule -a Clementine desktop='^4'
