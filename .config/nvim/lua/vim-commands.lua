@@ -69,8 +69,6 @@ endif
 " Disable git blame at start
 let g:gitblame_enabled = 0
 " Cellular Automata
-map t :CellularAutomaton make_it_rain<CR>
-map T :CellularAutomaton game_of_life<CR>
 map b :GitBlameToggle<CR>
 
 GitBlameDisable
