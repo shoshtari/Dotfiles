@@ -26,6 +26,9 @@ return {
 					error = "",
 				},
 			},
+			view = {
+				side = "right",
+			},
 		})
 		vim.keymap.set("n", "<C-n>", ":NvimTreeToggle <CR>")
 		vim.g.nvim_tree_respect_buf_cwd = 1

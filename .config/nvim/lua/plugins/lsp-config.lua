@@ -14,7 +14,7 @@ return {
 					"jedi_language_server",
 					"gopls",
 					"rust_analyzer",
-					"pyre",
+					"pylsp",
 					"clangd",
 					"verible",
 				},
@@ -40,7 +40,7 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyre.setup({
+			lspconfig.pylsp.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
@@ -53,7 +53,7 @@ return {
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-			vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 			vim.api.nvim_set_keymap("n", "<CR>", "<CR><Cmd>cclose<CR>", { noremap = false, silent = true })
 
