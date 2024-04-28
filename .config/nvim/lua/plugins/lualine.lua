@@ -95,14 +95,15 @@ return {
 		ins_left({
 			-- mode component
 			function()
-				return ""
+				-- return ""
+				return "󰣇"
 			end,
 			color = function()
 				-- auto change color according to neovims mode
 				local mode_color = {
-					n = colors.red,
-					i = colors.green,
-					v = colors.blue,
+					n = colors.green,
+					i = colors.blue,
+					v = colors.yellow,
 					[""] = colors.blue,
 					V = colors.blue,
 					c = colors.magenta,
@@ -111,7 +112,7 @@ return {
 					S = colors.orange,
 					[""] = colors.orange,
 					ic = colors.yellow,
-					R = colors.violet,
+					R = colors.red,
 					Rv = colors.violet,
 					cv = colors.red,
 					ce = colors.red,
