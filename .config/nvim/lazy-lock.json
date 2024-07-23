@@ -39,5 +39,7 @@
   "telescope.nvim": { "branch": "master", "commit": "6213322ab56eb27356fdc09a5078e41e3ea7f3bc" },
   "vim-antlr": { "branch": "master", "commit": "28c236788223a1ebbe6c831f89dbaa0a4722683f" },
   "vim-commentary": { "branch": "master", "commit": "e87cd90dc09c2a203e13af9704bd0ef79303d755" },
+  "vim-gitgutter": { "branch": "main", "commit": "bed580ab8b53f9a6cc0c81c8e91747a780b623ec" },
+  "vim-go": { "branch": "master", "commit": "a64d097a1af1772c24d13f34529b9be2a34b7721" },
   "vim-wakatime": { "branch": "master", "commit": "8c8856327815a077cbebeba8c7456312a3d2c39c" }
 }
