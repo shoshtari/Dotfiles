@@ -1,10 +1,15 @@
 return {
-	"Exafunction/codeium.nvim",
-	requires = {
-		"nvim-lua/plenary.nvim",
-		"hrsh7th/nvim-cmp",
+	{
+		"Exafunction/codeium.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+		{
+			"github/copilot.vim",
+		},
 	},
-	config = function()
-		require("codeium").setup({})
-	end,
 }
