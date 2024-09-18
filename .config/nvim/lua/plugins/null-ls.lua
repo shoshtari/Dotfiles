@@ -10,6 +10,7 @@ return {
 				null_ls.builtins.formatting.autopep8,
 				null_ls.builtins.completion.spell,
 			},
+			null_ls.builtins.diagnostics.flake8.with({extra_args = {"--max-line-length", "120"}})
 		})
 
 		vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
