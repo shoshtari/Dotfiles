@@ -5,6 +5,7 @@ set mouse=a
 syntax on
 
 set number
+set updatetime=100
 
 :augroup numbertoggle
 :  autocmd!
