@@ -11,11 +11,13 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
+					"jedi_language_server",
 					"gopls",
 					"rust_analyzer",
-					"jedi_language_server",
+					"pylsp",
 					"clangd",
 					"verible",
+					"hydra_lsp",
 				},
 			})
 		end,
@@ -30,19 +32,25 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-			})
 			lspconfig.jedi_language_server.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.pylsp.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.verible.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.hydra_lsp.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)

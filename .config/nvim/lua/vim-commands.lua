@@ -4,7 +4,6 @@ set background=dark
 set mouse=a
 syntax on
 
-set updatetime=100
 set number
 
 :augroup numbertoggle
