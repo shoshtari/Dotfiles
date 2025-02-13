@@ -33,8 +33,16 @@ return {
 	{
 		"echasnovski/mini.indentscope",
 		version = false,
+
 		config = function()
-			require("mini.indentscope").setup()
+			MiniIndentScope = require("mini.indentscope")
+			MiniIndentScope.setup({
+				draw = {
+					animation =  MiniIndentScope.gen_animation.linear({
+						duration = 40,
+					})
+				}
+			})
 		end,
 	},
 }

@@ -11,7 +11,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"jedi_language_server",
+					-- "jedi_language_server",
 					"gopls",
 					"rust_analyzer",
 					"pylsp",
@@ -32,9 +32,9 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.jedi_language_server.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.jedi_language_server.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
