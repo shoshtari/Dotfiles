@@ -21,6 +21,6 @@ require("lazy").setup("plugins")
 -- 		theme = 'auto'
 -- 	}
 -- }
-package.path = package.path .. ";/home/morteza/.config/nvim/?.lua"
+package.path = package.path .. ";/home/mpc/.config/nvim/?.lua"
 -- require("evil_lualine")
 require("vim-commands")
