@@ -59,8 +59,8 @@ endfunction
 " Skeletons
 if has("autocmd")
   augroup templates
-    autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
-    autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
+    autocmd BufNewFile *.cpp 0r ~/.config/nvim/skeletons/main.cpp
+    autocmd BufNewFile *.c 0r ~/.config/nvim/skeletons/main.c
   augroup END
 endif
 
