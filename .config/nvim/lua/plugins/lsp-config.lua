@@ -25,6 +25,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			-- pylsp and gopls will auto setup
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
@@ -35,15 +36,16 @@ return {
 			-- lspconfig.jedi_language_server.setup({
 			-- 	capabilities = capabilities,
 			-- })
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-			})
+
+			-- lspconfig.gopls.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pylsp.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.pylsp.setup({
+			-- 	capabilities = capabilities,
+			-- })
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})

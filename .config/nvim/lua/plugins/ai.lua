@@ -14,7 +14,7 @@ return {
 		"github/copilot.vim",
 		config = function()
 			-- print something
-			vim.g.copilot_proxy="localhost:2081"
+			vim.g.copilot_proxy="localhost:2080"
 			-- vim.g.copilot_proxy_strict_ssl=true
 		end,
 	},
