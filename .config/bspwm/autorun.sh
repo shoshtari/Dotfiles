@@ -2,7 +2,6 @@
 setxkbmap -layout us,ir -option "grp:win_space_toggle"
 
 # Wallpaper
-# feh --bg-fill /home/mpc/Pictures/Wallpapers/Rosette_Insley_3424.jpg
 feh --bg-fill $(cat ~/.config/bspwm/wallpaper)
 
 #Picom 
@@ -15,16 +14,15 @@ flameshot &
 /usr/bin/dunst &
 
 # Polybar
-/home/mpc/.config/bspwm/polybar/launch.sh
+/home/morteza/.config/bspwm/polybar/launch.sh
 
 # Conky 
 # conky &
 
 # Guake
-yakuake &
+# yakuake &
 
 # V2ray
-v2raya --lite &
 
 eval $(ssh-agent)
 
@@ -33,3 +31,13 @@ export XDG_CURRENT_DESKTOP=KDE
 export XDG_SESSION_DESKTOP=KDE
 
 
+# auto open apps 
+
+bspc rule -a firefox --one-shot desktop=^8 && firefox --new-window chatgpt.com
+function nekoray(){
+	sleep 1
+	/home/morteza/applications/nekoray/nekoray 
+}
+nohup $(nekoray) & 
+nohup telegram-desktop &
+nohup conky &

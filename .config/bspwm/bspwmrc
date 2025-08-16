@@ -14,12 +14,16 @@ bspc config gapless_monocle      true
 
 # BSPWM Rules
 bspc rule -a firefox desktop='^1' 
-bspc rule -a Terminator desktop='^2' follow=on 
+bspc rule -a ghostty desktop='^2' follow=on 
 bspc rule -a kitty desktop='^2' follow=on 
+bspc rule -a com.mitchellh.ghostty desktop='^2' follow=on 
 bspc rule -a jetbrains-goland desktop='^2'
+bspc rule -a jetbrains-pycharm desktop='^2'
 bspc rule -a TelegramDesktop desktop='^3' 
+bspc rule -a vmware-view desktop='^4'
 bspc rule -a Clementine desktop='^4'
 bspc rule -a gnome-clocks desktop='^5'
+bspc rule -a nekoray desktop='^7'
 # DropDown terminal
 bspc rule -a Guake sticky=on state=floating hidden=off
 bspc rule -a conky sticky=on state=floating border=off lower=on
