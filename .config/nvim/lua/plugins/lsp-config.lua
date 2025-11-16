@@ -28,9 +28,8 @@ return {
 			-- pylsp and gopls will auto setup
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			local lspconfig = require("lspconfig")
 			local opts = {}
-			lspconfig.lua_ls.setup({
+			vim.lsp.config("lua_ls", {
 				capabilities = capabilities,
 			})
 			-- lspconfig.jedi_language_server.setup({
@@ -40,19 +39,19 @@ return {
 			-- lspconfig.gopls.setup({
 			-- 	capabilities = capabilities,
 			-- })
-			lspconfig.rust_analyzer.setup({
+			vim.lsp.config("rust_analyzer", {
 				capabilities = capabilities,
 			})
 			-- lspconfig.pylsp.setup({
 			-- 	capabilities = capabilities,
 			-- })
-			lspconfig.clangd.setup({
+			vim.lsp.config("clangd", {
 				capabilities = capabilities,
 			})
-			lspconfig.verible.setup({
+			vim.lsp.config("verible", {
 				capabilities = capabilities,
 			})
-			lspconfig.hydra_lsp.setup({
+			vim.lsp.config("hydra_lsp", {
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
