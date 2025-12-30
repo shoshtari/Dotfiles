@@ -115,12 +115,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/opt/openvpn/sbin:/Users/morteza/go/bin
 alias v=nvim
 alias k=kubectl
 alias kns=kubens
 alias kcx=kubectx
+alias sl="sl -eaFcd"
+
+export PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/opt/openvpn/sbin:/Users/morteza/go/bin
 export PATH="/opt/homebrew/opt/libpq/bin:/Users/morteza/.local/bin:$PATH"
+export PATH="/Users/morteza/.codeium/windsurf/bin:$PATH"
 
 function kseal(){
 	ns=bale-bank
@@ -133,6 +136,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
 
-
-# Added by Windsurf
-export PATH="/Users/morteza/.codeium/windsurf/bin:$PATH"
