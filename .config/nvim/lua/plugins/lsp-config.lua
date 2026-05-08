@@ -14,8 +14,8 @@ return {
 					-- "jedi_language_server",
 					"gopls",
 					"rust_analyzer",
-					"pylsp",
 					"clangd",
+					"pylsp",
 					"verible",
 					"hydra_lsp",
 				},
@@ -60,6 +60,16 @@ return {
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
+			vim.keymap.set("n", "e", vim.diagnostic.setloclist, opts)
+			-- close quickfix window when leaving it
+			vim.api.nvim_create_autocmd("WinLeave", {
+				callback = function()
+					if vim.bo.buftype == "quickfix" then
+						-- We use pcall because lclose might error if the window is already closing
+						pcall(vim.cmd, "lclose")
+					end
+				end,
+			})
 			vim.api.nvim_set_keymap("n", "<CR>", "<CR><Cmd>cclose<CR>", { noremap = false, silent = true })
 
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)

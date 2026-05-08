@@ -17,8 +17,6 @@ set autoindent
 set smartindent
 
 let g:indentLine_char = '|'
-let g:airline_theme='hybridline'
-let g:airline#extensions#clock#format = '%c'
 :set tabstop=4
 :set shiftwidth=4
 " Map F5 to run program in diffrent language ( in some language compile and run)
