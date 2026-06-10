@@ -10,14 +10,14 @@ return {
 	-- 	end,
 	-- },
 
-	{
-		"github/copilot.vim",
-		config = function()
-			-- print something
-			vim.g.copilot_proxy="localhost:2080"
-			-- vim.g.copilot_proxy_strict_ssl=true
-		end,
-	},
+	-- {
+	-- 	"github/copilot.vim",
+	-- 	config = function()
+	-- 		-- print something
+	-- 		vim.g.copilot_proxy = "http://localhost:2080"
+	-- 		-- vim.g.copilot_proxy_strict_ssl=true
+	-- 	end,
+	-- },
 	{
 		"nomnivore/ollama.nvim",
 		dependencies = {
@@ -47,7 +47,7 @@ return {
 
 		---@type Ollama.Config
 		opts = {
-			model = "qwen2.5-coder:7b"
-		}
-	}
+			model = "qwen2.5-coder:7b",
+		},
+	},
 }

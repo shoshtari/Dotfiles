@@ -7,6 +7,8 @@ return {
 		dependencies = {
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
 			"rafamadriz/friendly-snippets",
 			"onsails/lspkind.nvim",
 		},
@@ -34,10 +36,10 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				sources = cmp.config.sources({
-					{ name = "codeium" },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "buffer" },
+					{ name = "path" },
 				}),
 
 				experimental = {

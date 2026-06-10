@@ -25,35 +25,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			-- pylsp and gopls will auto setup
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 			local opts = {}
-			vim.lsp.config("lua_ls", {
-				capabilities = capabilities,
-			})
-			-- lspconfig.jedi_language_server.setup({
-			-- 	capabilities = capabilities,
-			-- })
-
-			-- lspconfig.gopls.setup({
-			-- 	capabilities = capabilities,
-			-- })
-			vim.lsp.config("rust_analyzer", {
-				capabilities = capabilities,
-			})
-			-- lspconfig.pylsp.setup({
-			-- 	capabilities = capabilities,
-			-- })
-			vim.lsp.config("clangd", {
-				capabilities = capabilities,
-			})
-			vim.lsp.config("verible", {
-				capabilities = capabilities,
-			})
-			vim.lsp.config("hydra_lsp", {
-				capabilities = capabilities,
-			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
