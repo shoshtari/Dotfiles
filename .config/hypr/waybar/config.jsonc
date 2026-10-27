@@ -1,0 +1,221 @@
+// Generated riced config — backup of the old one in ~/.config/waybar.bak-*
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "margin-top": 8,
+  "margin-left": 20,
+  "margin-right": 20,
+  "spacing": 0,
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "idle_inhibitor",
+    "group/hardware",
+    "backlight",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "battery",
+    "clock",
+    "custom/power"
+  ],
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "rofi -show drun"
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "persistent-workspaces": {
+      "HDMI-A-1": [1, 2, 3, 4, 5],
+      "eDP-1": [6, 7, 8, 9, 10]
+    },
+    "sort-by-number": true
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 60,
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "$1",
+      "(.*) - Zen Browser": "$1"
+    }
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "dynamic-len": 30,
+    "dynamic-order": [
+      "title",
+      "artist"
+    ],
+    "player-icons": {
+      "default": "󰝚"
+    },
+    "status-icons": {
+      "paused": "󰏤"
+    },
+    "on-click": "playerctl play-pause"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉"
+    },
+    "tooltip-format-activated": "Idle inhibitor: on",
+    "tooltip-format-deactivated": "Idle inhibitor: off"
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "temperature"
+    ]
+  },
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "interval": 3,
+    "on-click": "ghostty -e btop"
+  },
+  "memory": {
+    "format": "󰘚 {percentage}%",
+    "interval": 5,
+    "tooltip-format": "{used:0.1f} / {total:0.1f} GiB",
+    "on-click": "ghostty -e btop"
+  },
+  "temperature": {
+    "critical-threshold": 85,
+    "format": "{icon} {temperatureC}°",
+    "format-icons": [
+      "󱃃",
+      "󰔏",
+      "󱃂"
+    ]
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-scroll-up": "brightnessctl -e4 -n2 set 5%+",
+    "on-scroll-down": "brightnessctl -e4 -n2 set 5%-"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-bluetooth-muted": "󰝟 muted",
+    "format-icons": {
+      "headphone": "󰋋",
+      "headset": "󰋎",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip-format": "{desc} — {volume}%"
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click": "blueman-manager"
+  },
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "󰈀 wired",
+    "format-linked": "󰈀 no IP",
+    "format-disconnected": "󰤭 offline",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "max-length": 22,
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}  󰁅 {bandwidthDownBytes}  󰁝 {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "{ifname}\n{ipaddr}  󰁅 {bandwidthDownBytes}  󰁝 {bandwidthUpBytes}",
+    "interval": 5,
+    "on-click": "ghostty -e nmtui"
+  },
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 12
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip-format": "{timeTo} — {power:.1f} W"
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    "format-alt": "󰃭 {:%a %d %b}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#89dceb'><b>{}</b></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "today": "<span color='#1e1e2e' bgcolor='#a6e3a1'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "custom/power": {
+    "format": "󰐥",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/hypr/waybar/power_menu.xml",
+    "menu-actions": {
+      "lock": "hyprlock",
+      "suspend": "systemctl suspend",
+      "reboot": "systemctl reboot",
+      "shutdown": "systemctl poweroff",
+      "logout": "hyprctl dispatch exit"
+    }
+  }
+}
