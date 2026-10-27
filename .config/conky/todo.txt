@@ -1,0 +1,2 @@
+Edit this list in ~/.config/conky/todo.txt
+One task per line, up to 8
