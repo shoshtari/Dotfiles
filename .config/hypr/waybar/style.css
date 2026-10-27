@@ -1,0 +1,175 @@
+/* Catppuccin Mocha islands — accents match Hyprland's cyan→green border */
+@define-color base     #1e1e2e;
+@define-color mantle   #181825;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color overlay0 #6c7086;
+@define-color text     #cdd6f4;
+@define-color subtext  #a6adc8;
+@define-color sky      #89dceb;
+@define-color teal     #94e2d5;
+@define-color green    #a6e3a1;
+@define-color blue     #89b4fa;
+@define-color mauve    #cba6f7;
+@define-color peach    #fab387;
+@define-color yellow   #f9e2af;
+@define-color red      #f38ba8;
+
+/* ---- Opacity knobs: change only the numbers (0 = invisible, 1 = solid) ----
+   islands only:  bar 0,    islands 0.85
+   one bar only:  bar 0.55, islands 0
+   or mix both.  Borders follow each opacity automatically. */
+@define-color bar-bg    alpha(@base, 0.55);
+@define-color island-bg alpha(@base, 0.85);
+
+* {
+    font-family: "CaskaydiaCove Nerd Font Propo", "Vazirmatn", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+/* Bar background; Hyprland's layer rule blurs what's behind it */
+window#waybar {
+    background: @bar-bg;
+    border: 1px solid shade(@bar-bg, 1.6);
+    border-radius: 12px;
+    color: @text;
+}
+
+tooltip {
+    background: alpha(@base, 0.95);
+    border: 1px solid @surface1;
+    border-radius: 10px;
+}
+tooltip label { color: @text; }
+
+/* Every module is a pill */
+#custom-logo,
+#workspaces,
+#mpris,
+#window,
+#tray,
+#idle_inhibitor,
+#hardware,
+#backlight,
+#pulseaudio,
+#bluetooth,
+#network,
+#battery,
+#clock,
+#custom-power {
+    background: @island-bg;
+    border: 1px solid shade(@island-bg, 1.6);
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 2px 3px;
+}
+
+/* ---- left ---- */
+#custom-logo {
+    color: @sky;
+    font-size: 17px;
+    padding: 0 14px 0 12px;
+}
+
+#workspaces { padding: 0 4px; }
+
+#workspaces button {
+    color: @overlay0;
+    background: transparent;
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    transition: all 0.25s cubic-bezier(.55, -0.68, .48, 1.68);
+}
+
+#workspaces button.empty { color: @surface1; }
+
+#workspaces button:hover {
+    color: @text;
+    background: @surface0;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    color: @base;
+    background: linear-gradient(45deg, @sky, @green);
+    padding: 0 16px;
+}
+
+#workspaces button.urgent {
+    color: @base;
+    background: @red;
+}
+
+#mpris { color: @mauve; }
+#mpris.paused { color: @overlay0; }
+
+/* ---- center ---- */
+#window { color: @subtext; font-weight: 500; }
+/* hide the pill on an empty workspace */
+window#waybar.empty #window {
+    background: transparent;
+    border-color: transparent;
+}
+
+/* ---- right ---- */
+#tray { padding: 0 10px; }
+#tray > .needs-attention { background: @red; border-radius: 8px; }
+
+#idle_inhibitor { color: @overlay0; }
+#idle_inhibitor.activated { color: @yellow; }
+
+#hardware { padding: 0 4px; }
+#cpu, #memory, #temperature { padding: 0 8px; }
+#cpu { color: @blue; }
+#memory { color: @mauve; }
+#temperature { color: @teal; }
+#temperature.critical { color: @red; }
+
+#backlight { color: @yellow; }
+
+#pulseaudio { color: @sky; }
+#pulseaudio.muted { color: @overlay0; }
+
+#bluetooth { color: @blue; }
+#bluetooth.off, #bluetooth.disabled { color: @overlay0; }
+
+#network { color: @green; }
+#network.disconnected { color: @red; }
+
+#battery { color: @green; }
+#battery.charging, #battery.plugged { color: @teal; }
+#battery.warning:not(.charging) { color: @peach; }
+
+@keyframes blink {
+    to { color: @base; background: @red; }
+}
+#battery.critical:not(.charging) {
+    color: @red;
+    animation: blink 0.8s steps(12) infinite alternate;
+}
+
+#clock { color: @sky; }
+
+#custom-power {
+    color: @red;
+    padding: 0 14px 0 12px;
+}
+#custom-power:hover { background: alpha(@red, 0.2); border-radius: 8px; }
+
+menu {
+    background: @base;
+    border: 1px solid @surface1;
+    border-radius: 10px;
+    padding: 4px;
+}
+menuitem {
+    color: @text;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+menuitem:hover { background: @surface0; }
