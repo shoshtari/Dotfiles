@@ -105,6 +105,12 @@ local function set_laptop_off(off)
     place_workspaces_soon()
 end
 
+-- one conky HUD per monitor; relaunched whenever the set of outputs changes
+local conkyLauncher = os.getenv("HOME") .. "/.config/conky/launch.sh"
+local function relaunch_conky_soon()
+    hl.timer(function () hl.exec_cmd(conkyLauncher) end, { timeout = 1000, type = "oneshot" })
+end
+
 local function toggle_laptop_monitor()
     set_laptop_off(not laptopOff)
 end
@@ -112,6 +118,7 @@ end
 hl.on("monitor.added", function ()
     if laptopOff then apply_laptop_monitor() end
     place_workspaces_soon()
+    relaunch_conky_soon()
 end)
 
 hl.on("monitor.removed", function ()
@@ -121,6 +128,7 @@ hl.on("monitor.removed", function ()
     else
         place_workspaces_soon()
     end
+    relaunch_conky_soon()
 end)
 
 
@@ -153,7 +161,13 @@ local menu = "rofi -show run"
 hl.on("hyprland.start", function ()
     -- silent so startup doesn't pull focus away from workspace 1
     hl.exec_cmd("throne", { workspace = "7 silent" })
-    hl.exec_cmd("conky")
+    hl.exec_cmd(conkyLauncher)
+    -- Notification daemon: start at login so it owns org.freedesktop.Notifications
+    -- before anything else (e.g. mako via D-Bus activation) can claim it
+    hl.exec_cmd("dunst -config ~/.config/dunst/dunstrc")
+    -- Cursor-chasing neko (oneko is X11-only and renders as a box under XWayland;
+    -- wayneko only walks along the bottom edge)
+    hl.exec_cmd("~/.local/bin/hyprneko")
 end)
 
 
@@ -366,7 +380,11 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local secondMod = "SUPER + SHIFT" -- Sets "Windows" key as main modifier
 
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+-- Screenshot: omasnap overlay (drag region / click window / Ctrl+A full monitor,
+-- then annotate; Ctrl+C copy, Ctrl+S save, Enter both, Esc close)
+hl.bind("Print", hl.dsp.exec_cmd("omasnap --editor overlay"))
+-- Fallback: old grim + slurp + swappy flow
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
@@ -496,6 +514,14 @@ hl.window_rule({
     match = { class = "^(Throne)$" },
 
     workspace = "7",
+})
+
+-- hyprneko moves by changing layer margins; don't animate it
+hl.layer_rule({
+    name  = "no-anim-hyprneko",
+    match = { namespace = "^hyprneko$" },
+
+    no_anim = true,
 })
 
 -- Blur behind waybar
